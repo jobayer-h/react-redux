@@ -1,3 +1,3 @@
 ## React Redux
 
-(Live Site)[https://react-redux-jh.netlify.app/]
+[Live Site Here][https://react-redux-jh.netlify.app/]
