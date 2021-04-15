@@ -3,20 +3,18 @@ import { connect } from 'react-redux';
 import { addToCart } from '../../Redux/actions/cartAction';
 import Product from './Product';
 
-const Shop = () => {
-    const products = [
-        { name: 'Asus Laptop', id: 1 },
-        { name: 'Dell Laptop', id: 2 },
-        { name: 'Hp Laptop', id: 3 },
-        { name: 'Lenevo Laptop', id: 4 },
-        { name: 'Aser Laptop', id: 5 }
-    ]
+const Shop = (props) => {
+    const {products ,addToCart} = props;
     return (
         <div>
             <h1>This is Shop</h1>
 
             {
-                products.map(product => <Product product={product}></Product>)
+                products.map(product => <Product 
+                    key={product.id}
+                    product={product}
+                    addToCart={addToCart}
+                    ></Product>)
             }
 
         </div>
